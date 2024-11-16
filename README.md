@@ -1,5 +1,5 @@
 # How to use
-sdf
+ 
 To install this for your neovim configuration
 
 ```
