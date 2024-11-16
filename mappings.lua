@@ -4,7 +4,9 @@ M.dap = {
   plugin = true,
   n = {
     ["<leader>db"] = {"<cmd> DapToggleBreakpoint <CR>"},
-    ["<leader>gp"] = {"<cmd> Gitsigns preview_hunk <CR>"}
+    ["<leader>gp"] = {"<cmd> Gitsigns preview_hunk <CR>"},
+    ["<leader>gs"] = {"<cmd> Gitsigns stage_hunk <CR>"},
+    ["<leader>gu"] = {"<cmd> Gitsigns undo_stage_hunk <CR>"}
   }
 }
 

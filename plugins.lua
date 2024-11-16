@@ -1,5 +1,9 @@
 local plugins = {
   {
+    "tpope/vim-fugitive",
+    lazy = false,
+  },
+  {
     "nvim-neotest/nvim-nio",
   },
   {
