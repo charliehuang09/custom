@@ -3,7 +3,8 @@ local M = {}
 M.dap = {
   plugin = true,
   n = {
-    ["<leader>db"] = {"<cmd> DapToggleBreakpoint <CR>"}
+    ["<leader>db"] = {"<cmd> DapToggleBreakpoint <CR>"},
+    ["<leader>gp"] = {"<cmd> Gitsigns preview_hunk <CR>"}
   }
 }
 
