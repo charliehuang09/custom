@@ -46,7 +46,7 @@ local plugins = {
   },
   {
     "nvimtools/none-ls.nvim",
-    ft = { "python" },
+    ft = { "python", "c++" },
     opts = function()
       return require "custom.configs.null-ls"
     end,
@@ -55,6 +55,8 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "clangd",
+        "clang-format",
         "black",
         "debugpy",
         "mypy",
@@ -100,5 +102,13 @@ local plugins = {
       require "custom.configs.lspconfig"
     end,
   },
+  {
+    "hrsh7th/nvim-cmp",
+    dependencies = { "alexander-born/cmp-bazel" },
+    opts = function(_, opts)
+      opts.sources = require("cmp").config.sources(vim.list_extend(opts.sources, { { name = "bazel" } }))
+    end,
+  },
+  { 'alexander-born/bazel.nvim', dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-lua/plenary.nvim' } },
 }
 return plugins
